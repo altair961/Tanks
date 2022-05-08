@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Extensions\Managed\Wrapper\olcPGEX_SoundWrapper.cpp" />
+    <ClCompile Include="Extensions\Includes.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Extensions\olcPGEX_Graphics2D.h" />
+    <ClInclude Include="Extensions\olcPGEX_Graphics3D.h" />
+    <ClInclude Include="Extensions\olcPGEX_PopUpMenu.h" />
+    <ClInclude Include="Extensions\olcPGEX_RayCastWorld.h" />
+    <ClInclude Include="Extensions\olcPGEX_Sound.h" />
+    <ClInclude Include="Extensions\Managed\Wrapper\olcPGEX_SoundWrapper.h" />
+    <ClInclude Include="olcPixelGameEngine.h" />
+    <ClInclude Include="Extensions\PGEX_Utilities.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitignore" />
+    <None Include="LICENCE.md" />
+    <None Include="README.md" />
+  </ItemGroup>
+</Project>
