@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "olcPixelgameEngine", "olcPi
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "olcPixelgameEngineManaged", "olcPixelGameEngineManaged\Extensions\Managed\olcPixelgameEngineManaged.vcxproj", "{20CF67B0-6B9C-41BC-8CE0-AACFC32C0550}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tanks.GameEngine.Interfaces", "Tanks.GameEngine.Interfaces\Tanks.GameEngine.Interfaces.csproj", "{5083207B-7C39-4180-BF66-667ABBCA61DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,18 @@ Global
 		{20CF67B0-6B9C-41BC-8CE0-AACFC32C0550}.Release|x64.Build.0 = Release|x64
 		{20CF67B0-6B9C-41BC-8CE0-AACFC32C0550}.Release|x86.ActiveCfg = Release|Win32
 		{20CF67B0-6B9C-41BC-8CE0-AACFC32C0550}.Release|x86.Build.0 = Release|Win32
+		{5083207B-7C39-4180-BF66-667ABBCA61DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5083207B-7C39-4180-BF66-667ABBCA61DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5083207B-7C39-4180-BF66-667ABBCA61DE}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{5083207B-7C39-4180-BF66-667ABBCA61DE}.Debug|x64.Build.0 = Debug|Any CPU
+		{5083207B-7C39-4180-BF66-667ABBCA61DE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5083207B-7C39-4180-BF66-667ABBCA61DE}.Debug|x86.Build.0 = Debug|Any CPU
+		{5083207B-7C39-4180-BF66-667ABBCA61DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5083207B-7C39-4180-BF66-667ABBCA61DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5083207B-7C39-4180-BF66-667ABBCA61DE}.Release|x64.ActiveCfg = Release|Any CPU
+		{5083207B-7C39-4180-BF66-667ABBCA61DE}.Release|x64.Build.0 = Release|Any CPU
+		{5083207B-7C39-4180-BF66-667ABBCA61DE}.Release|x86.ActiveCfg = Release|Any CPU
+		{5083207B-7C39-4180-BF66-667ABBCA61DE}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
