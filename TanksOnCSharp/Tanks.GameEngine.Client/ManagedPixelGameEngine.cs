@@ -6,7 +6,7 @@ using olc.managed;
 
 namespace Example
 {
-    public class ManagedDemo : PixelGameEngineManaged
+    public class ManagedPixelGameEngine : PixelGameEngineManaged
     {
 
         private SpriteManaged test2;
@@ -14,19 +14,7 @@ namespace Example
         public override bool OnUserCreate()
         {
             // Called once at the start, so create things here
-            olcPGEXSoundManaged.InitialiseAudio();
-
-            var test = new vf2dm(2f, 2f);
-
-            test2 = new SpriteManaged(10, 20);
-            SetDrawTarget(test2);
-
-            DrawLine(0, 5, 10, 5, PixelColor.BLUE);
-
-
-            SetDrawTarget(0);
-
-            var test4 = GetLayers();
+         
 
             return true;
         }
@@ -35,10 +23,6 @@ namespace Example
         {
 
             var rand = new Random();
-            // called once per frame
-            //for (int x = 0; x < ScreenWidth(); x++)
-            //    for (int y = 0; y < ScreenHeight(); y++)
-            //        Draw(x, y, new PixelManaged(Convert.ToByte(rand.Next() % 255), Convert.ToByte(rand.Next() % 255), Convert.ToByte(rand.Next() % 255)));
 
             for (int x = 0; x < ScreenWidth(); x++)
                 for (int y = 0; y < ScreenHeight(); y++)

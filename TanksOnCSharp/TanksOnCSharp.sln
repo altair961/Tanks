@@ -11,6 +11,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "olcPixelgameEngineManaged",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tanks.GameEngine.Interfaces", "Tanks.GameEngine.Interfaces\Tanks.GameEngine.Interfaces.csproj", "{5083207B-7C39-4180-BF66-667ABBCA61DE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tanks.GameEngine.Tests", "Tanks.GameEngine.Tests\Tanks.GameEngine.Tests.csproj", "{1CFE5B94-48F5-407B-9B1A-8CFCC5D11127}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tanks.GameEngine.Implementations", "Tanks.GameEngine.Implementations\Tanks.GameEngine.Implementations.csproj", "{55B71A31-9C52-4BC4-A7A5-29E6C351D125}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +73,30 @@ Global
 		{5083207B-7C39-4180-BF66-667ABBCA61DE}.Release|x64.Build.0 = Release|Any CPU
 		{5083207B-7C39-4180-BF66-667ABBCA61DE}.Release|x86.ActiveCfg = Release|Any CPU
 		{5083207B-7C39-4180-BF66-667ABBCA61DE}.Release|x86.Build.0 = Release|Any CPU
+		{1CFE5B94-48F5-407B-9B1A-8CFCC5D11127}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CFE5B94-48F5-407B-9B1A-8CFCC5D11127}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CFE5B94-48F5-407B-9B1A-8CFCC5D11127}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{1CFE5B94-48F5-407B-9B1A-8CFCC5D11127}.Debug|x64.Build.0 = Debug|Any CPU
+		{1CFE5B94-48F5-407B-9B1A-8CFCC5D11127}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1CFE5B94-48F5-407B-9B1A-8CFCC5D11127}.Debug|x86.Build.0 = Debug|Any CPU
+		{1CFE5B94-48F5-407B-9B1A-8CFCC5D11127}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CFE5B94-48F5-407B-9B1A-8CFCC5D11127}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CFE5B94-48F5-407B-9B1A-8CFCC5D11127}.Release|x64.ActiveCfg = Release|Any CPU
+		{1CFE5B94-48F5-407B-9B1A-8CFCC5D11127}.Release|x64.Build.0 = Release|Any CPU
+		{1CFE5B94-48F5-407B-9B1A-8CFCC5D11127}.Release|x86.ActiveCfg = Release|Any CPU
+		{1CFE5B94-48F5-407B-9B1A-8CFCC5D11127}.Release|x86.Build.0 = Release|Any CPU
+		{55B71A31-9C52-4BC4-A7A5-29E6C351D125}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55B71A31-9C52-4BC4-A7A5-29E6C351D125}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55B71A31-9C52-4BC4-A7A5-29E6C351D125}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{55B71A31-9C52-4BC4-A7A5-29E6C351D125}.Debug|x64.Build.0 = Debug|Any CPU
+		{55B71A31-9C52-4BC4-A7A5-29E6C351D125}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{55B71A31-9C52-4BC4-A7A5-29E6C351D125}.Debug|x86.Build.0 = Debug|Any CPU
+		{55B71A31-9C52-4BC4-A7A5-29E6C351D125}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55B71A31-9C52-4BC4-A7A5-29E6C351D125}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55B71A31-9C52-4BC4-A7A5-29E6C351D125}.Release|x64.ActiveCfg = Release|Any CPU
+		{55B71A31-9C52-4BC4-A7A5-29E6C351D125}.Release|x64.Build.0 = Release|Any CPU
+		{55B71A31-9C52-4BC4-A7A5-29E6C351D125}.Release|x86.ActiveCfg = Release|Any CPU
+		{55B71A31-9C52-4BC4-A7A5-29E6C351D125}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

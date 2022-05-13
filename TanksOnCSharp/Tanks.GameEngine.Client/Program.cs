@@ -7,7 +7,7 @@ namespace Example
     {
         static void Main(string[] args)
         {
-            var demo = new ManagedDemo();
+            var demo = new ManagedPixelGameEngine();
             if (demo.Construct(100, 100, 4, 4) == rcodeManaged.OK)
                 demo.Start();
 
