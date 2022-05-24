@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\olcPixelGameEngineManaged\Extensions\Managed\olcPixelgameEngineManaged.vcxproj" />
+    <PackageReference Include="OpenTK" Version="3.0.1" />
   </ItemGroup>
 
 </Project>

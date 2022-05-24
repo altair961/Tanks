@@ -5,15 +5,11 @@ VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tanks.GameEngine.Client", "Tanks.GameEngine.Client\Tanks.GameEngine.Client.csproj", "{39E1FFBF-9C67-4C0A-BAF0-3CE37838CAB7}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "olcPixelgameEngine", "olcPixelGameEngineManaged\olcPixelgameEngine.vcxproj", "{48B04E2E-34A8-465E-8597-5624A90D1E6D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tanks.GameEngine.Interfaces", "Tanks.GameEngine.Interfaces\Tanks.GameEngine.Interfaces.csproj", "{5083207B-7C39-4180-BF66-667ABBCA61DE}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "olcPixelgameEngineManaged", "olcPixelGameEngineManaged\Extensions\Managed\olcPixelgameEngineManaged.vcxproj", "{20CF67B0-6B9C-41BC-8CE0-AACFC32C0550}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tanks.GameEngine.Tests", "Tanks.GameEngine.Tests\Tanks.GameEngine.Tests.csproj", "{1CFE5B94-48F5-407B-9B1A-8CFCC5D11127}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tanks.GameEngine.Interfaces", "Tanks.GameEngine.Interfaces\Tanks.GameEngine.Interfaces.csproj", "{5083207B-7C39-4180-BF66-667ABBCA61DE}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tanks.GameEngine.Tests", "Tanks.GameEngine.Tests\Tanks.GameEngine.Tests.csproj", "{1CFE5B94-48F5-407B-9B1A-8CFCC5D11127}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tanks.GameEngine.Implementations", "Tanks.GameEngine.Implementations\Tanks.GameEngine.Implementations.csproj", "{55B71A31-9C52-4BC4-A7A5-29E6C351D125}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tanks.GameEngine.Implementations", "Tanks.GameEngine.Implementations\Tanks.GameEngine.Implementations.csproj", "{55B71A31-9C52-4BC4-A7A5-29E6C351D125}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,30 +33,6 @@ Global
 		{39E1FFBF-9C67-4C0A-BAF0-3CE37838CAB7}.Release|x64.Build.0 = Release|Any CPU
 		{39E1FFBF-9C67-4C0A-BAF0-3CE37838CAB7}.Release|x86.ActiveCfg = Release|Any CPU
 		{39E1FFBF-9C67-4C0A-BAF0-3CE37838CAB7}.Release|x86.Build.0 = Release|Any CPU
-		{48B04E2E-34A8-465E-8597-5624A90D1E6D}.Debug|Any CPU.ActiveCfg = Debug|x64
-		{48B04E2E-34A8-465E-8597-5624A90D1E6D}.Debug|Any CPU.Build.0 = Debug|x64
-		{48B04E2E-34A8-465E-8597-5624A90D1E6D}.Debug|x64.ActiveCfg = Debug|x64
-		{48B04E2E-34A8-465E-8597-5624A90D1E6D}.Debug|x64.Build.0 = Debug|x64
-		{48B04E2E-34A8-465E-8597-5624A90D1E6D}.Debug|x86.ActiveCfg = Debug|Win32
-		{48B04E2E-34A8-465E-8597-5624A90D1E6D}.Debug|x86.Build.0 = Debug|Win32
-		{48B04E2E-34A8-465E-8597-5624A90D1E6D}.Release|Any CPU.ActiveCfg = Release|x64
-		{48B04E2E-34A8-465E-8597-5624A90D1E6D}.Release|Any CPU.Build.0 = Release|x64
-		{48B04E2E-34A8-465E-8597-5624A90D1E6D}.Release|x64.ActiveCfg = Release|x64
-		{48B04E2E-34A8-465E-8597-5624A90D1E6D}.Release|x64.Build.0 = Release|x64
-		{48B04E2E-34A8-465E-8597-5624A90D1E6D}.Release|x86.ActiveCfg = Release|Win32
-		{48B04E2E-34A8-465E-8597-5624A90D1E6D}.Release|x86.Build.0 = Release|Win32
-		{20CF67B0-6B9C-41BC-8CE0-AACFC32C0550}.Debug|Any CPU.ActiveCfg = Debug|x64
-		{20CF67B0-6B9C-41BC-8CE0-AACFC32C0550}.Debug|Any CPU.Build.0 = Debug|x64
-		{20CF67B0-6B9C-41BC-8CE0-AACFC32C0550}.Debug|x64.ActiveCfg = Debug|x64
-		{20CF67B0-6B9C-41BC-8CE0-AACFC32C0550}.Debug|x64.Build.0 = Debug|x64
-		{20CF67B0-6B9C-41BC-8CE0-AACFC32C0550}.Debug|x86.ActiveCfg = Debug|Win32
-		{20CF67B0-6B9C-41BC-8CE0-AACFC32C0550}.Debug|x86.Build.0 = Debug|Win32
-		{20CF67B0-6B9C-41BC-8CE0-AACFC32C0550}.Release|Any CPU.ActiveCfg = Release|x64
-		{20CF67B0-6B9C-41BC-8CE0-AACFC32C0550}.Release|Any CPU.Build.0 = Release|x64
-		{20CF67B0-6B9C-41BC-8CE0-AACFC32C0550}.Release|x64.ActiveCfg = Release|x64
-		{20CF67B0-6B9C-41BC-8CE0-AACFC32C0550}.Release|x64.Build.0 = Release|x64
-		{20CF67B0-6B9C-41BC-8CE0-AACFC32C0550}.Release|x86.ActiveCfg = Release|Win32
-		{20CF67B0-6B9C-41BC-8CE0-AACFC32C0550}.Release|x86.Build.0 = Release|Win32
 		{5083207B-7C39-4180-BF66-667ABBCA61DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5083207B-7C39-4180-BF66-667ABBCA61DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5083207B-7C39-4180-BF66-667ABBCA61DE}.Debug|x64.ActiveCfg = Debug|Any CPU

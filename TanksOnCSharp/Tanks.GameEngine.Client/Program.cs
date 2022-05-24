@@ -1,5 +1,6 @@
-﻿using System;
-using olc.managed;
+﻿
+
+using Tanks.GameEngine.Client;
 
 namespace Example
 {
@@ -7,10 +8,11 @@ namespace Example
     {
         static void Main(string[] args)
         {
-            var demo = new ManagedPixelGameEngine();
-            if (demo.Construct(100, 100, 4, 4) == rcodeManaged.OK)
-                demo.Start();
-
+            using (Game game = new Game(800, 600, "Tanks"))
+            {
+                var framesPerSecondToStrive = 60.0;
+                game.Run(framesPerSecondToStrive);
+            }
         }
     }
 }
