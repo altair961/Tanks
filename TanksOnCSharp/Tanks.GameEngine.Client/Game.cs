@@ -11,6 +11,15 @@ namespace Tanks.GameEngine.Client
             
         }
 
+        protected override void OnUpdateFrame(FrameEventArgs e)
+        {
+            var keyboardState = Keyboard.GetState();
 
+            if (keyboardState.IsKeyDown(Key.Escape))
+            {
+                Exit();
+            }
+            base.OnUpdateFrame(e);
+        }
     }
 }
