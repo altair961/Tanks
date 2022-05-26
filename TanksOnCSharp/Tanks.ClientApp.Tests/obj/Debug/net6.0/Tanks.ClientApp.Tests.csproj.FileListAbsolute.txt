@@ -1,0 +1,5 @@
+C:\Users\firebat\Desktop\repos\TanksOnCSharp\TanksOnCSharp\Tanks.ClientApp.Tests\obj\Debug\net6.0\Tanks.ClientApp.Tests.csproj.AssemblyReference.cache
+C:\Users\firebat\Desktop\repos\TanksOnCSharp\TanksOnCSharp\Tanks.ClientApp.Tests\obj\Debug\net6.0\Tanks.ClientApp.Tests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\firebat\Desktop\repos\TanksOnCSharp\TanksOnCSharp\Tanks.ClientApp.Tests\obj\Debug\net6.0\Tanks.ClientApp.Tests.AssemblyInfoInputs.cache
+C:\Users\firebat\Desktop\repos\TanksOnCSharp\TanksOnCSharp\Tanks.ClientApp.Tests\obj\Debug\net6.0\Tanks.ClientApp.Tests.AssemblyInfo.cs
+C:\Users\firebat\Desktop\repos\TanksOnCSharp\TanksOnCSharp\Tanks.ClientApp.Tests\obj\Debug\net6.0\Tanks.ClientApp.Tests.csproj.CoreCompileInputs.cache

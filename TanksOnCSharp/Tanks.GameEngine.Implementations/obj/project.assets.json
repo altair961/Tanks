@@ -2,19 +2,6 @@
   "version": 3,
   "targets": {
     "net6.0": {
-      "Tanks.GameEngine.Implementations/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "Tanks.GameEngine.Interfaces": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Tanks.GameEngine.Implementations.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Tanks.GameEngine.Implementations.dll": {}
-        }
-      },
       "Tanks.GameEngine.Interfaces/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -28,11 +15,6 @@
     }
   },
   "libraries": {
-    "Tanks.GameEngine.Implementations/1.0.0": {
-      "type": "project",
-      "path": "../Tanks.GameEngine.Implementations/Tanks.GameEngine.Implementations.csproj",
-      "msbuildProject": "../Tanks.GameEngine.Implementations/Tanks.GameEngine.Implementations.csproj"
-    },
     "Tanks.GameEngine.Interfaces/1.0.0": {
       "type": "project",
       "path": "../Tanks.GameEngine.Interfaces/Tanks.GameEngine.Interfaces.csproj",
@@ -41,7 +23,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Tanks.GameEngine.Implementations >= 1.0.0"
+      "Tanks.GameEngine.Interfaces >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -50,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\firebat\\Desktop\\repos\\TanksOnCSharp\\TanksOnCSharp\\Tanks.ClientApp\\Tanks.ClientApp.csproj",
-      "projectName": "Tanks.ClientApp",
-      "projectPath": "C:\\Users\\firebat\\Desktop\\repos\\TanksOnCSharp\\TanksOnCSharp\\Tanks.ClientApp\\Tanks.ClientApp.csproj",
+      "projectUniqueName": "C:\\Users\\firebat\\Desktop\\repos\\TanksOnCSharp\\TanksOnCSharp\\Tanks.GameEngine.Implementations\\Tanks.GameEngine.Implementations.csproj",
+      "projectName": "Tanks.GameEngine.Implementations",
+      "projectPath": "C:\\Users\\firebat\\Desktop\\repos\\TanksOnCSharp\\TanksOnCSharp\\Tanks.GameEngine.Implementations\\Tanks.GameEngine.Implementations.csproj",
       "packagesPath": "C:\\Users\\firebat\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\firebat\\Desktop\\repos\\TanksOnCSharp\\TanksOnCSharp\\Tanks.ClientApp\\obj\\",
+      "outputPath": "C:\\Users\\firebat\\Desktop\\repos\\TanksOnCSharp\\TanksOnCSharp\\Tanks.GameEngine.Implementations\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\firebat\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -71,8 +53,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\firebat\\Desktop\\repos\\TanksOnCSharp\\TanksOnCSharp\\Tanks.GameEngine.Implementations\\Tanks.GameEngine.Implementations.csproj": {
-              "projectPath": "C:\\Users\\firebat\\Desktop\\repos\\TanksOnCSharp\\TanksOnCSharp\\Tanks.GameEngine.Implementations\\Tanks.GameEngine.Implementations.csproj"
+            "C:\\Users\\firebat\\Desktop\\repos\\TanksOnCSharp\\TanksOnCSharp\\Tanks.GameEngine.Interfaces\\Tanks.GameEngine.Interfaces.csproj": {
+              "projectPath": "C:\\Users\\firebat\\Desktop\\repos\\TanksOnCSharp\\TanksOnCSharp\\Tanks.GameEngine.Interfaces\\Tanks.GameEngine.Interfaces.csproj"
             }
           }
         }

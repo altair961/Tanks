@@ -9,7 +9,7 @@ namespace Example
     {
         static void Main(string[] args)
         {
-            int width = DisplayDevice.Default.Width; ;
+            int width = DisplayDevice.Default.Width;
             int height = DisplayDevice.Default.Height;
 
             using (Game game = new Game(width, height, "Tanks"))
