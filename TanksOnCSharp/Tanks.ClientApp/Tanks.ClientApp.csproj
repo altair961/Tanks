@@ -7,4 +7,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Tanks.GameEngine.Implementations\Tanks.GameEngine.Implementations.csproj" />
+  </ItemGroup>
+
 </Project>

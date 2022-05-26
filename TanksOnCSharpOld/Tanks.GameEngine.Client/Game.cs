@@ -36,12 +36,12 @@ namespace Tanks.GameEngine.Client
 
             GL.Begin(PrimitiveType.Quads);
 
+            someObj.GetCurrentPicturePixelSet();
 
             DrawPixel(0, 0, Color.AliceBlue);
 
 
             GL.End();
-
 
 
             this.SwapBuffers();
