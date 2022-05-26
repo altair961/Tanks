@@ -14,9 +14,9 @@ namespace Example
 
             using (Game game = new Game(width, height, "Tanks"))
             {
-                game.WindowState = OpenTK.WindowState.Fullscreen;
+               // game.WindowState = OpenTK.WindowState.Fullscreen;
                 var framesPerSecondToStrive = 60.0;
-                
+
                 game.Run(framesPerSecondToStrive);
             }
             Console.WriteLine("width: " + width);
