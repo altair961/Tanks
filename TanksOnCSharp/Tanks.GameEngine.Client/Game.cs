@@ -89,24 +89,24 @@ namespace Tanks.GameEngine.Client
         private void DrawPixel(int x, int y)
         {
             var originPoint = new Point(-1, 1);
+            var pixelSide = 0.005;
 
             // Upper-right
             GL.Color3(Color.Red);
-            GL.Vertex2(0.5, 0.5);
-            //GL.Vertex2(-1, 1);
+            GL.Vertex2(originPoint.X + pixelSide, originPoint.Y);
 
             // Upper-left
             GL.Color3(Color.BlueViolet);
-            //GL.Vertex2(-0.5, 0.5);
-            GL.Vertex2(-1, 1);
+            GL.Vertex2(originPoint.X, originPoint.Y);
 
             // Bottom-left
             GL.Color3(Color.Fuchsia);
-            GL.Vertex2(-0.5, -0.5);
+            GL.Vertex2(originPoint.X - pixelSide, originPoint.Y);
 
             // Bottom-right
             GL.Color3(Color.Honeydew);
-            GL.Vertex2(0.5, -0.5);
+            //            GL.Vertex2(0.5, -0.5);
+            GL.Vertex2(originPoint.X + pixelSide, originPoint.Y - pixelSide);
         }
     }
 }
