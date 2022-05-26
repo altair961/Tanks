@@ -1,4 +1,5 @@
-﻿using Tanks.GameEngine.Implementations;
+﻿using OpenTK;
+using Tanks.GameEngine.Implementations;
 
 namespace Example
 {
@@ -8,9 +9,21 @@ namespace Example
         {
             Console.WriteLine("Tanks");
 
-            using (var gameEngine = new GameEngine("Tanks"))
+            int scrWidth = DisplayDevice.Default.Width;
+            int scrHeight = DisplayDevice.Default.Height;
+
+        //    scrWidth = 800;
+         //   scrHeight = 600;
+
+            using (var gameEngine = new GameEngine(scrWidth, scrHeight, "Tanks"))
             {
-                gameEngine.Launch();
+#if DEBUG
+                Console.WriteLine("Mode=Debug");
+#else
+                gameEngine.WindowState = OpenTK.WindowState.Fullscreen;
+#endif
+                var framesPerSecondToStrive = 60.0;
+                gameEngine.Run(framesPerSecondToStrive);
             }
         }
     }

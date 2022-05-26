@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="OpenTK" Version="3.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Tanks.GameEngine.Implementations\Tanks.GameEngine.Implementations.csproj" />
   </ItemGroup>
 
