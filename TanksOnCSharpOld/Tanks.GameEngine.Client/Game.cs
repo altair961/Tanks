@@ -36,7 +36,7 @@ namespace Tanks.GameEngine.Client
 
             GL.Begin(PrimitiveType.Quads);
 
-            someObj.GetCurrentPicturePixelSet();
+        //    someObj.GetCurrentPicturePixelSet();
 
             DrawPixel(0, 0, Color.AliceBlue);
 
