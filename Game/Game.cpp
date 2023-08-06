@@ -1,6 +1,8 @@
-#include <iostream>
+#include <SFML/Graphics.hpp>
+using namespace sf;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    VideoMode vm(1920, 1080);
+    RenderWindow window(vm, "Tanks", Style::Fullscreen);
 }
