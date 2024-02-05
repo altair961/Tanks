@@ -1,15 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.1.32328.378
+VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tanks.ClientApp", "Tanks.ClientApp\Tanks.ClientApp.csproj", "{7465E7D1-9DD3-4498-8D15-1A076FCE0099}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tanks.PixelSetsGenerator.Interfaces", "Tanks.PixelSetsGenerator.Interfaces\Tanks.PixelSetsGenerator.Interfaces.csproj", "{10B98E94-47EA-4B07-9607-60571DB4D1EE}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tanks.GameEngine.Interfaces", "Tanks.GameEngine.Interfaces\Tanks.GameEngine.Interfaces.csproj", "{9982C456-48C6-4C40-B03C-A842F1273C56}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tanks.GameEngine.Implementations", "Tanks.GameEngine.Implementations\Tanks.GameEngine.Implementations.csproj", "{140D3A12-769F-4F56-B648-DCE5ACB21824}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TanksOnCSharp", "TanksOnCSharp.csproj", "{A61788B5-CA4D-4509-A05E-DCED932517EE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,27 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7465E7D1-9DD3-4498-8D15-1A076FCE0099}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7465E7D1-9DD3-4498-8D15-1A076FCE0099}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7465E7D1-9DD3-4498-8D15-1A076FCE0099}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7465E7D1-9DD3-4498-8D15-1A076FCE0099}.Release|Any CPU.Build.0 = Release|Any CPU
-		{10B98E94-47EA-4B07-9607-60571DB4D1EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{10B98E94-47EA-4B07-9607-60571DB4D1EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{10B98E94-47EA-4B07-9607-60571DB4D1EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{10B98E94-47EA-4B07-9607-60571DB4D1EE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9982C456-48C6-4C40-B03C-A842F1273C56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9982C456-48C6-4C40-B03C-A842F1273C56}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9982C456-48C6-4C40-B03C-A842F1273C56}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9982C456-48C6-4C40-B03C-A842F1273C56}.Release|Any CPU.Build.0 = Release|Any CPU
-		{140D3A12-769F-4F56-B648-DCE5ACB21824}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{140D3A12-769F-4F56-B648-DCE5ACB21824}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{140D3A12-769F-4F56-B648-DCE5ACB21824}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{140D3A12-769F-4F56-B648-DCE5ACB21824}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A61788B5-CA4D-4509-A05E-DCED932517EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A61788B5-CA4D-4509-A05E-DCED932517EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A61788B5-CA4D-4509-A05E-DCED932517EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A61788B5-CA4D-4509-A05E-DCED932517EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {C702280A-74A5-4C1F-8D6A-C0C9057101DA}
+		SolutionGuid = {AE7911B3-686A-4B6C-8C91-578567D0B3D1}
 	EndGlobalSection
 EndGlobal
