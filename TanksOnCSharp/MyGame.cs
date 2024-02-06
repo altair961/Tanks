@@ -1,4 +1,5 @@
-﻿using Silk.NET.OpenGL;
+﻿using Silk.NET.Input;
+using Silk.NET.OpenGL;
 using Silk.NET.Windowing;
 
 namespace TanksOnCSharp
@@ -16,6 +17,19 @@ namespace TanksOnCSharp
 
             window.Render += Window_Render;
             window.Load += Window_Load;
+
+            window.Initialize();
+
+            var inputContext = window.CreateInput();
+            foreach (var keyboard in inputContext.Keyboards) 
+            {
+                keyboard.KeyDown += Keyboard_KeyDown;
+            }
+        }
+
+        private void Keyboard_KeyDown(IKeyboard arg1, Key arg2, int arg3)
+        {
+            Console.WriteLine(arg2);
         }
 
         private void Window_Load()
