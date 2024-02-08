@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TanksOnCSharp", "TanksOnCSharp.csproj", "{A61788B5-CA4D-4509-A05E-DCED932517EE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tanks", "Tanks.csproj", "{BC559177-D668-4762-87B6-26B87A15204B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A61788B5-CA4D-4509-A05E-DCED932517EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A61788B5-CA4D-4509-A05E-DCED932517EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A61788B5-CA4D-4509-A05E-DCED932517EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A61788B5-CA4D-4509-A05E-DCED932517EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC559177-D668-4762-87B6-26B87A15204B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC559177-D668-4762-87B6-26B87A15204B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC559177-D668-4762-87B6-26B87A15204B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC559177-D668-4762-87B6-26B87A15204B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {AE7911B3-686A-4B6C-8C91-578567D0B3D1}
+		SolutionGuid = {FC71DF35-9FF1-443F-AEAC-56555CB07F8B}
 	EndGlobalSection
 EndGlobal

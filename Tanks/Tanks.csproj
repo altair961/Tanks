@@ -7,8 +7,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Silk.NET" Version="2.20.0" />
-  </ItemGroup>
-
 </Project>
