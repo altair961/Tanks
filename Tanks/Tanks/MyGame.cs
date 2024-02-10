@@ -1,5 +1,4 @@
-﻿using Silk.NET.Core.Contexts;
-using Silk.NET.OpenGL;
+﻿using Silk.NET.OpenGL;
 using Silk.NET.Windowing;
 
 namespace Tanks
