@@ -4,10 +4,10 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
-
-            var game = new MyGame();
+            var game = new Game();
             game.Start();
+
+            return;
         }
     }
 }
