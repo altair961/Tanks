@@ -50,7 +50,7 @@ namespace Tanks
             foreach (var keyboard in _inputContext.Keyboards)
             {
                 if (keyboard.IsKeyPressed(Key.Up))
-                    Console.WriteLine("up has been pressed");
+                    Console.WriteLine("pupsia!");
             }
         }
 
