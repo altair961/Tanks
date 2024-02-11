@@ -19,7 +19,7 @@ namespace TanksSdl
             }
 
             _window = SDL.SDL_CreateWindow(
-                "Game Programming in C++ (Chapter 1)", // Window title
+                "Tanks", // Window title
                 100,    // Top left x-coordinate of window
                 100,    // Top left y-coordinate of window
                 1024,   // Width of window
@@ -68,6 +68,18 @@ namespace TanksSdl
             SDL.SDL_SetRenderDrawColor(_renderer, 57, 83, 164, 255);
             SDL.SDL_RenderClear(_renderer);
 
+            var rect = new SDL.SDL_Rect
+            {
+                x = 300,
+                y = 100,
+                w = 50,
+                h = 50
+            };
+            SDL.SDL_SetRenderDrawColor(_renderer, 255, 255, 0, 255);
+
+            // Draw a filled in rectangle.
+            SDL.SDL_RenderFillRect(_renderer, ref rect);
+
             SDL.SDL_RenderPresent(_renderer);
 
         }
@@ -78,7 +90,9 @@ namespace TanksSdl
 
         internal void Shutdown()
         {
-            throw new NotImplementedException();
+            SDL.SDL_DestroyRenderer(_renderer);
+            SDL.SDL_DestroyWindow(_window);
+            SDL.SDL_Quit();
         }
 
         private void ProcessInput()

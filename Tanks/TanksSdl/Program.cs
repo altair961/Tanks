@@ -13,7 +13,8 @@ namespace TanksSdl
             {
                 game.RunLoop();
             }
-            //game.Shutdown();
+            
+            game.Shutdown();
         }
     }
 }
