@@ -2,6 +2,12 @@
 
 namespace TanksSdl
 {
+    internal class Vector2 
+    {
+        double x;
+        double y;
+    }
+
     internal class Game
     {
         private IntPtr _window;
@@ -9,6 +15,9 @@ namespace TanksSdl
         private bool _isRunning;
         private IntPtr _texture;
         private int _frameNumber = 0;
+        private float _deltaTime;
+        private uint _ticksCount = 0;
+        private int yPosition = 300;
 
         public bool Initialize() 
         {
@@ -113,10 +122,12 @@ namespace TanksSdl
                 h = 16
             };
 
+            yPosition--;
+
             var rectDst = new SDL.SDL_Rect
             {
-                x = 0,
-                y = 0,
+                x = 200,
+                y = yPosition,
                 w = 64,
                 h = 64
             };
@@ -126,7 +137,10 @@ namespace TanksSdl
 
             SDL.SDL_RenderCopy(_renderer, _texture, ref rectSrc, ref rectDst);
 
-            _frameNumber++;
+            //_frameNumber++;
+
+            _frameNumber++; // _frameNumber + (int)Math.Ceiling(_frameNumber * _deltaTime);
+
             if (_frameNumber > 1)
             {
                 _frameNumber = 0;
@@ -134,11 +148,32 @@ namespace TanksSdl
 
 
             SDL.SDL_RenderPresent(_renderer);
-
         }
 
         private void UpdateGame()
         {
+            // Wait until 50ms has elapsed since last frame
+            while (!SDL.SDL_TICKS_PASSED(SDL.SDL_GetTicks(), _ticksCount + 50))
+                ;
+
+
+            // Delta time is the difference in ticks from last frame
+            // Converted to seconds
+            _deltaTime = (SDL.SDL_GetTicks() - _ticksCount) / 1000.0f; // deltaTime is in seconds
+
+            // Update tick counts (for next frame)
+            _ticksCount = SDL.SDL_GetTicks();
+
+            // Clamp maximum delta time value
+            if (_deltaTime > 0.05f)
+            {
+                _deltaTime = 0.5f;
+            }
+
+
+//            Vector2 _tankPos;
+
+
         }
 
         internal void Shutdown()
