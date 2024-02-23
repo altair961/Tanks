@@ -8,7 +8,7 @@ namespace TanksSdl
         double y;
     }
 
-    internal class Game
+    internal class Game2
     {
         private IntPtr _window;
         private IntPtr _renderer;
