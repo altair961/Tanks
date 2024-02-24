@@ -6,12 +6,17 @@ namespace Tanks
     {
         public Game(IRender renderer)
         {
-            ;
+            IsInitialized = false;
         }
 
-        public void IdempotentInitialize()
+        public bool IsInitialized { get; private set; }
+
+        public void Initialize()
         {
-            throw new NotImplementedException();
+            if (IsInitialized)
+                throw new InvalidOperationException("The Game class instance has already been initialized. Please make sure, that you call Initialize method only once.");
+            
+            IsInitialized = true;
         }
 
         public void RunLoop()

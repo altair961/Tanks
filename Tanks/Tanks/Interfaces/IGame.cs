@@ -1,6 +1,6 @@
 ﻿namespace Tanks.Interfaces
 {
-    public interface IGame : IIdempotentInitialize, IRunLoop, IShutdown
+    public interface IGame : IInitialize, IRunLoop, IShutdown
     {
     }
 }
