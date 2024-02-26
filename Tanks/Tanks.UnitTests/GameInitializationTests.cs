@@ -30,15 +30,64 @@ namespace Tanks.UnitTests
             // Arrange
             var game = IoCContainer.CompositionRoot().Resolve<IGame>();
 
-            // Act Assert
-            Assert.Throws<InvalidOperationException>(() => 
-            { 
+            // Act
+            TestDelegate testedCode = () =>
+            {
                 game.Initialize();
                 game.Initialize();
-            });
+            };
+
+            // Assert
+            Assert.Throws<InvalidOperationException>(testedCode);
         }
 
-        //When_game_is_not_initialized_shutdown_idempotentShould_not_throw_any_ex
+        [Test]
+        public void Given_Game_Is_Initialized_Shutdown_throws_no_ex() 
+        {
+            // Arrange 
+            var game = IoCContainer.CompositionRoot().Resolve<IGame>();
+
+            // Act
+            TestDelegate testedCode = () =>
+            {
+                game.Initialize();
+                game.ShutDown();
+            };
+
+            // Assert
+            Assert.DoesNotThrow(testedCode);
+        }
+
+        [Test]
+        public void Given_Game_Is_not_Initialized_Shutdown_throws_no_ex()
+        {
+            // Arrange 
+            var game = IoCContainer.CompositionRoot().Resolve<IGame>();
+
+            // Act
+            TestDelegate testedCode = game.ShutDown;
+
+            // Assert
+            Assert.DoesNotThrow(testedCode);
+        }
+
+        [Test]
+        public void Given_Shutdown_is_invoked_already_following_call_to_it_throws() 
+        {
+            // Arrange 
+            var game = IoCContainer.CompositionRoot().Resolve<IGame>();
+
+            // Act
+            TestDelegate testedCode = () =>
+            {
+                game.ShutDown();
+                game.ShutDown();
+            };
+
+            Assert.Throws<InvalidOperationException>(testedCode);
+        }
+
+        //shutdown twice throws
         //When_idempotentShutdown_was_invoked_following_calls_to_it_should_not_throw_any_ex
         //When_idempotentRunLoop_was_invoked_following_calls_to_it_should_not_throw_any_ex
         //Given_idempotentInitialize_was_not_invoked_when_idempotentRunLoop_invoked_should_throw_ex

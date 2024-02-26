@@ -1,7 +1,8 @@
 ﻿namespace Tanks.Interfaces
 {
-    public interface IShutdown
+    public interface IShutDown
     {
-        void Shutdown();
+        public bool IsShutDown { get; }
+        void ShutDown();
     }
 }
