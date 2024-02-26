@@ -9,8 +9,10 @@ namespace Tanks.UnitTests
         [Test]
         public void When_Application_instantiated_Initialize_should_be_invoked()
         {
-            // Arrange Act
+            // Arrange
             var gameMock = Substitute.For<IGame>();
+            
+            // Act
             _ = new Application(gameMock);
 
             // Assert
@@ -20,8 +22,15 @@ namespace Tanks.UnitTests
         [Test]
         public void When_Application_ctor_Game_param_is_null_should_throw_ArgumentNullException()
         {
-            // Arrange Act Assert
-            Assert.Throws<ArgumentNullException>(() => { _ = new Application(null); });
+            // Arrange
+            IGame game = null;
+
+            // Act
+            TestDelegate testedCode = () => new Application(game);
+            
+
+            // Assert
+            Assert.Throws<ArgumentNullException>(testedCode);
         }
 
         [Test]
@@ -84,6 +93,7 @@ namespace Tanks.UnitTests
                 game.ShutDown();
             };
 
+            // Assert
             Assert.Throws<InvalidOperationException>(testedCode);
         }
 
