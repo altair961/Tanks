@@ -20,7 +20,7 @@ namespace Tanks.UnitTests
         }
 
         [Test]
-        public void When_Application_ctor_Game_param_is_null_should_throw_ArgumentNullException()
+        public void When_Application_ctor_Game_param_is_null_should_throw()
         {
             // Arrange
             IGame game = null;
@@ -68,7 +68,7 @@ namespace Tanks.UnitTests
         }
 
         [Test]
-        public void Given_Game_Is_not_Initialized_Shutdown_throws_no_ex()
+        public void Given_Game_Is_not_Initialized_when_ShutDown_invoked_should_not_throw()
         {
             // Arrange 
             var game = IoCContainer.CompositionRoot().Resolve<IGame>();
@@ -97,9 +97,37 @@ namespace Tanks.UnitTests
             Assert.Throws<InvalidOperationException>(testedCode);
         }
 
-        //shutdown twice throws
-        //When_idempotentShutdown_was_invoked_following_calls_to_it_should_not_throw_any_ex
-        //When_idempotentRunLoop_was_invoked_following_calls_to_it_should_not_throw_any_ex
-        //Given_idempotentInitialize_was_not_invoked_when_idempotentRunLoop_invoked_should_throw_ex
+        [Test]
+        public void Given_Initialize_was_not_yet_invoked_when_RunLoop_invoked_should_throw()
+        {
+            // Arrange 
+            var game = IoCContainer.CompositionRoot().Resolve<IGame>();
+
+            // Act
+            TestDelegate testedCode = game.RunLoop;
+
+            // Assert
+            Assert.Throws<InvalidOperationException>(testedCode);
+        }
+
+        [Test]
+        public void Given_Initialized_was_invoked_when_RunLoop_invoked_should_not_throw() 
+        {
+            // Arrange
+            var game = IoCContainer.CompositionRoot().Resolve<IGame>();
+
+            // Act
+            TestDelegate testedCode = () =>
+            {
+                game.Initialize();
+                game.RunLoop();
+            };
+
+            // Assert
+            Assert.DoesNotThrow(testedCode);
+        }
+
+
+        //When_RunLoop_was_invoked_following_calls_to_it_should_throw
     }
 }

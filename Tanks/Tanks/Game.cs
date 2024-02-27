@@ -19,14 +19,19 @@ namespace Tanks
             if (IsInitialized)
                 throw new InvalidOperationException(
                     "The Game class instance has already been initialized. " +
-                    "Please make sure, that you call Initialize method only once.");
+                    "Please, make sure, that you call Initialize method only once.");
             
             IsInitialized = true;
         }
 
         public void RunLoop()
         {
-            throw new NotImplementedException();
+            if (!IsInitialized) 
+                throw new InvalidOperationException(
+                "The Game class hasn't been initialized yet. " +
+                "Please, make sure, that you invoke Initialize method " +
+                "before starting to run the game loop.");                
+
         }
 
         public void ShutDown()
@@ -34,7 +39,7 @@ namespace Tanks
             if(IsShutDown)
                 throw new InvalidOperationException(
                     "The Game class instance has already been shut down. " +
-                    "Please make sure, that you call ShutDown method only once.");
+                    "Please, make sure, that you call ShutDown method only once.");
             IsShutDown = true;
         }
     }
