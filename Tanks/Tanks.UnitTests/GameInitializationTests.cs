@@ -127,7 +127,22 @@ namespace Tanks.UnitTests
             Assert.DoesNotThrow(testedCode);
         }
 
+        [Test]
+        public void Given_RunLoop_has_already_been_invoked_following_calls_to_it_should_throw() 
+        {
+            // Arrange
+            var game = IoCContainer.CompositionRoot().Resolve<IGame>();
+            
+            // Act
+            TestDelegate testedCode = () =>
+            {
+                game.Initialize();
+                game.RunLoop();
+                game.RunLoop();
+            };
 
-        //When_RunLoop_was_invoked_following_calls_to_it_should_throw
+            // Assert
+            Assert.Throws<InvalidOperationException>(testedCode);
+        }
     }
 }

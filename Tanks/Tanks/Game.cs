@@ -8,12 +8,11 @@ namespace Tanks
         {
             IsInitialized = false;
             IsShutDown = false;
+            IsRunning = false;
         }
-
         public bool IsInitialized { get; private set; }
-
+        public bool IsRunning { get; private set; }
         public bool IsShutDown { get; private set; }
-
         public void Initialize()
         {
             if (IsInitialized)
@@ -23,17 +22,19 @@ namespace Tanks
             
             IsInitialized = true;
         }
-
         public void RunLoop()
         {
-            if (!IsInitialized) 
-                throw new InvalidOperationException(
+            if (!IsInitialized) throw new InvalidOperationException(
                 "The Game class hasn't been initialized yet. " +
                 "Please, make sure, that you invoke Initialize method " +
-                "before starting to run the game loop.");                
+                "before starting to run the game loop.");
 
+            if (IsRunning) throw new InvalidOperationException(
+                "The game loop has already been started." +
+                "Please, make sure, that you invoke RunLoop only once");
+
+            IsRunning = true;
         }
-
         public void ShutDown()
         {
             if(IsShutDown)
