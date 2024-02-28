@@ -2,7 +2,7 @@
 
 namespace TanksSdl
 {
-    internal class Vector2 
+    internal class Vector2 // TODO: Use dotnet class Point instead
     {
         double x;
         double y;

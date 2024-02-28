@@ -144,5 +144,17 @@ namespace Tanks.UnitTests
             // Assert
             Assert.Throws<InvalidOperationException>(testedCode);
         }
+
+        [Test]
+        public void When_Game_has_not_been_initialized_yet_should_have_IsShutDown_set_to_true()
+        {
+            // Arrange Act
+            var game = IoCContainer.CompositionRoot().Resolve<IGame>();
+
+            //Assert
+            Assert.IsTrue(game.IsShutDown);
+        }
+
+        
     }
 }

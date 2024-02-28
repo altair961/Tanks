@@ -7,7 +7,7 @@ namespace Tanks
         public Game(IRender renderer)
         {
             IsInitialized = false;
-            IsShutDown = false;
+            IsShutDown = true;
             IsRunning = false;
         }
         public bool IsInitialized { get; private set; }
@@ -15,10 +15,9 @@ namespace Tanks
         public bool IsShutDown { get; private set; }
         public void Initialize()
         {
-            if (IsInitialized)
-                throw new InvalidOperationException(
-                    "The Game class instance has already been initialized. " +
-                    "Please, make sure, that you call Initialize method only once.");
+            if (IsInitialized) throw new InvalidOperationException(
+                "The Game class instance has already been initialized. " +
+                "Please, make sure, that you call Initialize method only once.");
             
             IsInitialized = true;
         }
@@ -37,10 +36,10 @@ namespace Tanks
         }
         public void ShutDown()
         {
-            if(IsShutDown)
-                throw new InvalidOperationException(
-                    "The Game class instance has already been shut down. " +
-                    "Please, make sure, that you call ShutDown method only once.");
+            if(IsShutDown) throw new InvalidOperationException(
+                "The Game class instance has already been shut down. " +
+                "Please, make sure, that you call ShutDown method only once.");
+            
             IsShutDown = true;
         }
     }
