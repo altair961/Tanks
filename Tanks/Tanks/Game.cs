@@ -20,6 +20,7 @@ namespace Tanks
                 "Please, make sure, that you call Initialize method only once.");
             
             IsInitialized = true;
+            IsShutDown = false;
         }
         public void RunLoop()
         {

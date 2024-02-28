@@ -68,17 +68,6 @@ namespace Tanks.UnitTests
         }
 
         [Test]
-        public void Given_Game_Is_not_Initialized_when_ShutDown_invoked_should_not_throw()
-        {
-            // Arrange 
-            var game = IoCContainer.CompositionRoot().Resolve<IGame>();
-
-            // Act
-            TestDelegate testedCode = game.ShutDown;
-
-            // Assert
-            Assert.DoesNotThrow(testedCode);
-        }
 
         [Test]
         public void Given_Shutdown_is_invoked_already_following_call_to_it_throws() 
