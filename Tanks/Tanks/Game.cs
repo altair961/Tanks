@@ -4,8 +4,11 @@ namespace Tanks
 {
     public class Game : IGame
     {
-        public Game(IRender renderer)
+        public Game(IWindow window)//IRender renderer)
         {
+            if (window is null) throw new ArgumentNullException(nameof(window), 
+                "Please provide window object when making an instance of Game class.");
+
             IsInitialized = false;
             IsShutDown = true;
             IsRunning = false;

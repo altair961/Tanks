@@ -6,8 +6,8 @@ namespace Tanks
     {
         public Application(IGame game)
         {
-            if (game == null)
-                throw new ArgumentNullException("game", "Please provide game object when making instance of Application class.");
+            if (game is null)
+                throw new ArgumentNullException(nameof(game), "Please provide game object when making an instance of Application class.");
 
             game.Initialize();
         }

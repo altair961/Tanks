@@ -141,7 +141,32 @@ namespace Tanks.UnitTests
             var game = IoCContainer.CompositionRoot().Resolve<IGame>();
 
             //Assert
-            Assert.IsTrue(game.IsShutDown);
+            Assert.True(game.IsShutDown);
+        }
+
+        [Test]
+        public void When_Game_has_been_initialized_should_set_IsShutDown_to_false()
+        {
+            // Arrange
+            var game = IoCContainer.CompositionRoot().Resolve<IGame>();
+
+            game.Initialize();
+
+            // Assert
+            Assert.False(game.IsShutDown);
+        }
+
+        [Test]
+        public void When_Game_ctor_Window_param_is_null_should_throw() 
+        {
+            // Arrange
+            IWindow window = null;
+
+            // Act
+            TestDelegate testedCode = () => new Game(window);
+            
+            // Assert
+            Assert.Throws<ArgumentNullException>(testedCode);
         }
 
         
