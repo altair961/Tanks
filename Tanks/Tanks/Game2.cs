@@ -46,10 +46,10 @@ namespace TanksSdl
             }
 
             _renderer = SDL.SDL_CreateRenderer(
-            _window, // Window to create renderer for
-            -1,
-            SDL.SDL_RendererFlags.SDL_RENDERER_ACCELERATED | 
-            SDL.SDL_RendererFlags.SDL_RENDERER_PRESENTVSYNC
+                _window, // Window to create renderer for
+                -1,
+                SDL.SDL_RendererFlags.SDL_RENDERER_ACCELERATED | 
+                SDL.SDL_RendererFlags.SDL_RENDERER_PRESENTVSYNC
             );
 
             if (_renderer == IntPtr.Zero)
