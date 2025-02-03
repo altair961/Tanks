@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SilkNetTriangle", "SilkNetT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lesson01", "Lesson01\Lesson01.csproj", "{95E1AB86-D42A-4D40-A154-7BBFC13FEAE2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScreenColorClear", "ScreenColorClear\ScreenColorClear.csproj", "{9F790C2D-BC29-4FDD-81B6-85479B5E1E1A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{95E1AB86-D42A-4D40-A154-7BBFC13FEAE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{95E1AB86-D42A-4D40-A154-7BBFC13FEAE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{95E1AB86-D42A-4D40-A154-7BBFC13FEAE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F790C2D-BC29-4FDD-81B6-85479B5E1E1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F790C2D-BC29-4FDD-81B6-85479B5E1E1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F790C2D-BC29-4FDD-81B6-85479B5E1E1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F790C2D-BC29-4FDD-81B6-85479B5E1E1A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

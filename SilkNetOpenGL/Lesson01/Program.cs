@@ -9,7 +9,7 @@ namespace Lesson01
     {
         private static IWindow window;
         private static GL Gl;
-        private static readonly Vector4D<float> CornflowerBlue = new Vector4D<float>(0.392f, 0.584f, 0.929f, 1.0f);
+        private static readonly float[] CornflowerBlue = { 0.392f, 0.584f, 0.929f, 1.0f };
         private static readonly string VertexShaderSource = @"
         #version 440 core
         
@@ -110,6 +110,10 @@ namespace Lesson01
             //Gl.ClearColor(0.4f, 0.8f, 0.5f, 1.0f);
             //Gl.Clear((uint)ClearBufferMask.ColorBufferBit);
             //GL.ClearBuffer(GLEnum.Color, 0, CornflowerBlue);
+            fixed (float* ptr = CornflowerBlue)
+            {
+                Gl.ClearBuffer(Silk.NET.OpenGL.GLEnum.Color, 0, ptr);
+            }
             Gl.BindVertexArray(Vao);
             Gl.UseProgram(Shader);
             Gl.PointSize(80.0f);
