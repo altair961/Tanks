@@ -3,7 +3,7 @@ using Silk.NET.Maths;
 using Silk.NET.OpenGL;
 using Silk.NET.Windowing;
 
-namespace Lesson01
+namespace DrawPoint
 {
     internal class Program
     {
@@ -49,9 +49,9 @@ namespace Lesson01
             window.Dispose();
         }
 
-        private static unsafe void OnLoad() 
+        private static unsafe void OnLoad()
         {
-            IInputContext input = window.CreateInput();
+            //IInputContext input = window.CreateInput();
             //for (int i = 0; i < input.Keyboards.Count; i++)
             //{
             //    input.Keyboards[i].KeyDown += KeyDown;
@@ -107,9 +107,6 @@ namespace Lesson01
 
         private static unsafe void OnRender(double obj) //Method needs to be unsafe due to draw elements.
         {
-            //Gl.ClearColor(0.4f, 0.8f, 0.5f, 1.0f);
-            //Gl.Clear((uint)ClearBufferMask.ColorBufferBit);
-            //GL.ClearBuffer(GLEnum.Color, 0, CornflowerBlue);
             fixed (float* ptr = CornflowerBlue)
             {
                 Gl.ClearBuffer(Silk.NET.OpenGL.GLEnum.Color, 0, ptr);
