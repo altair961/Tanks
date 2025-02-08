@@ -10,17 +10,6 @@ namespace ColoredTriangle
         Position,
         Color
     }
-    public class VertexPositionColor
-    {
-        public VertexPositionColor(float x, float y, float z, Color color)
-        {
-            Position = [x, y, z];
-            Color = color;
-        }
-
-        public IEnumerable<float> Position { get; set; }
-        public Color Color { get; set; }
-    }
 
     internal class Program
     {
@@ -136,39 +125,36 @@ namespace ColoredTriangle
             Gl.DeleteShader(fragmentShader);
 
             // Create the vertex buffer
-            // Vertex data, uploaded to the VBO.
-            //VertexPositionColor[] vertices = [
-            //    new VertexPositionColor(0.75f, -0.25f, 0.0f, Color.Red),
-            //    new VertexPositionColor(0.0f, 0.5f, 0.0f, Color.Green),
-            //    new VertexPositionColor(-0.75f, -0.25f, 0.0f, Color.Blue)
-            //];
-
+            // Vertex data, uploaded to the VBO
             float[] vertices = {
-                0.75f, -0.25f, 0.0f,
-                0.0f, 0.5f, 0.0f,
-                -0.75f, -0.25f, 0.0f
+                0.75f, -0.25f,  0.0f, 1.0f, 0.0f, 0.0f,
+                0.0f,   0.5f,   0.0f, 0.0f, 1.0f, 0.0f,
+                -0.75f, -0.25f, 0.0f, 0.0f, 0.0f, 1.0f
             };
 
             VertexBuffer = Gl.GenBuffer();
             Gl.BindBuffer(BufferTargetARB.ArrayBuffer, VertexBuffer);
+
             fixed (void* v = &vertices[0])
             {
                 Gl.BufferData(BufferTargetARB.ArrayBuffer, (nuint)(vertices.Length * sizeof(uint)), v, BufferUsageARB.StaticDraw);
             }
+
             Vao = Gl.GenVertexArray();
             Gl.BindVertexArray(Vao);
 
             // Our stride constant. The stride must be in bytes, so we take the first attribute (a vec3), multiply it
             // by the size in bytes of a float, and then take our second attribute (a vec2), and do the same.
             //Gl.VertexAttribPointer((uint)VertexAttribute.Position, 4, VertexAttribPointerType.Float, false, 3 * sizeof(float), 0);
-            Gl.VertexAttribPointer(0, 3, VertexAttribPointerType.Float, false, 3 * sizeof(float), null);
+            Gl.VertexAttribPointer(0, 3, VertexAttribPointerType.Float, false, 6 * sizeof(float), (void*)0);
 
             Gl.EnableVertexAttribArray((uint)VertexAttribute.Position);
-            //Gl.VertexAttribPointer((uint)VertexAttribute.Color, 4, VertexAttribPointerType.Float, false, 3 * sizeof(float), 1);
-            //Gl.EnableVertexAttribArray((uint)VertexAttribute.Color);
+            Gl.VertexAttribPointer((uint)VertexAttribute.Color, 3, VertexAttribPointerType.Float, false, 6 * sizeof(float), (void*)(3 * sizeof(float)));
+            Gl.EnableVertexAttribArray((uint)VertexAttribute.Color);
 
             Gl.EnableVertexAttribArray(0);
-            
+
+
             Gl.BindVertexArray(0);
         }
 
