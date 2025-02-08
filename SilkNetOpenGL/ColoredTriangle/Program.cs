@@ -143,13 +143,48 @@ namespace ColoredTriangle
             Vao = Gl.GenVertexArray();
             Gl.BindVertexArray(Vao);
 
+            // Buffer is a chunk of memory on the GPU. It is just bytes until we specify to pipline how to handle it
+            // Vertex attribute is an input variable specified on per vertex basis
+            // layout (location = 0) in vec2 position;
+            //   x,y         x,y        x,y        x,y  x,y
+            // {(a,b)       (c,d)      (e,f)      (g,h)(i,j)}
+            //   position 0 position 1 position 2 ... 
+            //   vertex 0   vertex 1
+            //
+            // if we want to specify colors it looks like this:
+            // layout (location = 0) in vec2 position;
+            // layout (location = 1) in vec3 color;
+            //   x,y         r,g,b     x,y         r,g,b    x,y  r,g,b
+            // {(a,b)       (c,d,e)   (f,g)       (g,h,i)  (i,j)(k,l,m)}
+            //   position 0 color 0    position 1  color 1 ...
+            //  [     vertex 0     ]  [     vertex 1     ]  
+
+            // Stride specifies an interval in bytes from one entry to the next
+            // So when we start with an index at 0 of vertex buffer stride specifies how many bytes 
+            // it needs to advance each time to get to the start of the next vertices data
+
             // Our stride constant. The stride must be in bytes, so we take the first attribute (a vec3), multiply it
             // by the size in bytes of a float, and then take our second attribute (a vec2), and do the same.
-            //Gl.VertexAttribPointer((uint)VertexAttribute.Position, 4, VertexAttribPointerType.Float, false, 3 * sizeof(float), 0);
-            Gl.VertexAttribPointer(0, 3, VertexAttribPointerType.Float, false, 6 * sizeof(float), (void*)0);
 
+            // here we tell pipline how to handle the bytes coming into vertex shader
+            Gl.VertexAttribPointer(
+                (int)VertexAttribute.Position, //we describe position, it corresponds to "layout (location = 0)" in shader  
+                3, // position is 3 floats long, becuse position is represented by three values: x, y, z
+                VertexAttribPointerType.Float, // vertices specified as floats
+                false, // we don't want normalization for each vertices (applies to ints o
+                6 * sizeof(float), // how big is one vertex (one vertex is one position-color) in each stride
+                (void*)0); // this specifies where in each stride should we find the position. It is 0 because 
+                           // position comes first in the stride
             Gl.EnableVertexAttribArray((uint)VertexAttribute.Position);
-            Gl.VertexAttribPointer((uint)VertexAttribute.Color, 3, VertexAttribPointerType.Float, false, 6 * sizeof(float), (void*)(3 * sizeof(float)));
+
+            Gl.VertexAttribPointer(
+                (uint)VertexAttribute.Color, 
+                3, 
+                VertexAttribPointerType.Float, 
+                false, 
+                6 * sizeof(float), 
+                (void*)(3 * sizeof(float))); // this specifies where in each stride should we find
+
             Gl.EnableVertexAttribArray((uint)VertexAttribute.Color);
 
             Gl.EnableVertexAttribArray(0);
