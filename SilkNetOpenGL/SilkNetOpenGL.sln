@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScreenColorClear", "ScreenC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrawPoint", "DrawPoint\DrawPoint.csproj", "{2B61CEFF-410C-4108-9F03-B455C4045987}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ColoredTriangle", "ColoredTriangle\ColoredTriangle.csproj", "{A071D45D-817D-48EF-866A-36F5E703CA57}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{2B61CEFF-410C-4108-9F03-B455C4045987}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2B61CEFF-410C-4108-9F03-B455C4045987}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2B61CEFF-410C-4108-9F03-B455C4045987}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A071D45D-817D-48EF-866A-36F5E703CA57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A071D45D-817D-48EF-866A-36F5E703CA57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A071D45D-817D-48EF-866A-36F5E703CA57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A071D45D-817D-48EF-866A-36F5E703CA57}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
