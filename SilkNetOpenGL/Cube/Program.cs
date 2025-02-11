@@ -2,7 +2,7 @@
 using Silk.NET.OpenGL;
 using Silk.NET.Windowing;
 
-namespace SilkNetTriangle
+namespace Cube
 {
     internal class Program
     {
